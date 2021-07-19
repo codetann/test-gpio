@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #44454e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch {
+  width: 5rem;
+  height: 3rem;
+  border-radius: 2rem;
+  border: none;
+  background: #161819;
+  padding: 0.5rem;
+  color: white;
+  transition: 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.circle {
+  height: 100%;
+  width: 4rem;
+  background: white;
+  border-radius: 3rem;
+  transition: 0.2s;
+}
+p {
+  width: 100%;
+}
+
+.p-off {
+  transition: 0.2s;
+}
+
+.p-on {
+  transform: translateX(-100%);
+  transition: 0.2s;
+}
+
+.circle-off {
+  transition: 0.2s;
+  background: #242529;
+}
+.circle-on {
+  transform: translateX(100%);
+  transition: 0.2s;
+}
+
+.switch-on {
+  background: #1551ff;
+}
