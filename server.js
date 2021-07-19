@@ -4,7 +4,8 @@ const path = require("path");
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);
 
-const blinkLED = require("./gpio");
+const blinkLED = require("./gpio/led");
+const rotateMotor = require("./gpio/motor");
 
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, "public")));
@@ -17,7 +18,7 @@ io.on("connection", (socket) => {
   console.log("[ socket.io ] - new user connected");
 
   socket.on("blink", () => {
-    blinkLED();
+    rotateMotor();
   });
 });
 
